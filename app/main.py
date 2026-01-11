@@ -8,4 +8,3 @@ app.include_router(review_router, prefix="/api")
 @app.get("/")
 def health_check():
     return {"status": "DocGuard AI is running"}
-
