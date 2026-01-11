@@ -10,7 +10,7 @@ async def review_document(file: UploadFile = File(...)):
     analysis = analyze_document(text)
 
     return {
-        "filename": file.filename,
-        "analysis": analysis
+        "summary": analysis.get("summary"),
+        "risks": analysis.get("risks"),
+        "missing_clauses": analysis.get("missing_clauses")
     }
-
